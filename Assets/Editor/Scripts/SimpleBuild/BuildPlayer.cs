@@ -136,7 +136,7 @@ namespace SimpleBuild {
                     options.options |= UnityEditor.BuildOptions.ConnectWithProfiler;
                 }
                 // default: AllowDebugging 設定 / BUILD_ALLOW_DEBUGGING=false で解除
-                if (Environment.GetEnvironmentVariable(EnvironmentVariableBuildAllowDebugging) != "false")
+                if (Environment.GetEnvironmentVariable(EnvironmentVariableBuildAllowDebugging) != "true")
                 {
                     options.options |= UnityEditor.BuildOptions.AllowDebugging;
                 }
