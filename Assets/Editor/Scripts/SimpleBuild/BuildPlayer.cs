@@ -198,7 +198,9 @@ namespace SimpleBuild {
                 // default: Append 設定 / BUILD_CLEAN=true で Replace 設定
                 if (BuildTarget == BuildTarget.iOS && Environment.GetEnvironmentVariable(EnvironmentVariableBuildFaster) == "true")
                 {
-                    options.options |= UnityEditor.BuildOptions.AcceptExternalModificationsToPlayer;
+                    // Waiting for fix:
+                    // https://issuetracker.unity3d.com/issues/buildoptions-dot-acceptexternalmodificationstoplayer-throws-error-when-building-for-ios-if-the-xcode-project-does-not-already-exist
+                    // options.options |= UnityEditor.BuildOptions.AcceptExternalModificationsToPlayer;
                 }
             }
             options.options |= UnityEditor.BuildOptions.CompressWithLz4;
