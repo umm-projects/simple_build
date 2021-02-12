@@ -145,8 +145,7 @@ namespace SimpleBuild {
 
             var buildAssetBundleOptions =
                 BuildAssetBundleOptions.None
-                | BuildAssetBundleOptions.ChunkBasedCompression
-                | BuildAssetBundleOptions.IgnoreTypeTreeChanges;
+                | BuildAssetBundleOptions.ChunkBasedCompression;
             if (AssetBundle.ShouldForceRebuildAssetBundles())
             {
                 buildAssetBundleOptions |= BuildAssetBundleOptions.ForceRebuildAssetBundle;
